@@ -1,12 +1,8 @@
-const TO_CATEGORY = 'to_category';
+import { combineReducers } from 'redux';
+import { Categories } from './category.redux';
+import { CategoryNavigation } from './catelog-navigate.redux';
 
-const Data = [
-  
-];
-
-export function gotoCategory(category) {
-  return {
-    type: TO_CATEGORY,
-    category,
-  };
-}
+export default combineReducers({
+  Categories,
+  CategoryNavigation,
+});

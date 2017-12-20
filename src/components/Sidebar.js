@@ -1,22 +1,29 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import './sidebar.css';
 
-export default class Sidebar extends Component {
-  renderItems = () => {
-    const data = [
-      'fasfasfasdfsadf',
-      'fasfasfasdfsadf',
-      'fasfasfasdfsadf',
-      'fasfasfasdfsadf',
-      'fasfasfasdfsadf',
-      'fasfasfasdfsadf',
-    ];
+import { updateCategoryIndex } from '../redux/catelog-navigate.redux';
 
-    const items = data.map((item) => {
+class Sidebar extends Component {
+  handleClick = (index) => {
+    this.props.updateCategoryIndex(index);
+  };
+
+  renderItems = () => {
+    const items = this.props.categories.map((item, index) => {
       return (
-        <li className="item">
-          <span>{item}</span>
+        <li
+          className="item"
+          key={`${item.name}-${index + 1}`}
+        >
+          <div
+            role="button"
+            tabIndex={0}
+            onMouseDown={() => { this.handleClick(index); }}
+          >
+            <span>{item.name}</span>
+          </div>
         </li>
       );
     });
@@ -34,3 +41,15 @@ export default class Sidebar extends Component {
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    categories: state.Categories,
+  };
+};
+
+const mapDispatchToProps = {
+  updateCategoryIndex,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Sidebar);
