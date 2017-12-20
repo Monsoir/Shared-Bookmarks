@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+
+.favicon {
+  width: 50px;
+  height: 50px;
+}
+
+.catelogSubContainer {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.catelogTitle {
+  font-size: 30px;
+}
+
+.catelogRemark {
+  font-size: 20px;
+}

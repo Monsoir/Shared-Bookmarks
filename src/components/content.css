@@ -1,5 +1,44 @@
 .content {
   height: 100%;
   width: 100%;
-  background-color: yellow;
+  /* background-color: gray; */
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid black;
+}
+
+.header {
+  flex: 0.1;
+  height: 100%;
+  width: 100%;
+  /* background-color: red; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  flex: 1;
+  font-size: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.contentBody {
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  /* background-color: yellow; */
+  overflow: scroll;
+}
+
+.contentList {
+  list-style-type: none;
+  margin: 20px;
+}
+
+.contentListItem {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
