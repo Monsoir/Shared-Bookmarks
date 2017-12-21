@@ -1,10 +1,10 @@
 .content {
   height: 100%;
   width: 100%;
-  /* background-color: gray; */
+  background-color: #FBF7F7;
   display: flex;
   flex-direction: column;
-  border-left: 1px solid black;
+  /* border-left: 1px solid black; */
 }
 
 .header {
@@ -23,6 +23,8 @@
   font-size: 30px;
   margin-left: 20px;
   margin-right: 20px;
+  color: #DC4712;
+  font-family: "Avenir-Light";
 }
 
 .contentBody {

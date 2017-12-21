@@ -1,7 +1,7 @@
 .sidebar {
   height: 100%;
   width: 100%;
-  /* background-color: red; */
+  background-color: #F1E9E3;
   margin: 0;
   padding: 0;
   overflow: scroll;
@@ -17,8 +17,13 @@
 
 .item {
   font-size: 20px;
-  color: black;
+  color: #EE712B;
+  font-family: "Arial-BoldMT";
   padding: 0;
   padding: 20px;
   cursor: pointer;
+}
+
+.itemButton {
+  outline: none;
 }

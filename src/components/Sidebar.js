@@ -18,6 +18,7 @@ class Sidebar extends Component {
           key={`${item.name}-${index + 1}`}
         >
           <div
+            className="itemButton"
             role="button"
             tabIndex={0}
             onMouseDown={() => { this.handleClick(index); }}
