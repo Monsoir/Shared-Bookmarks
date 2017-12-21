@@ -20,7 +20,7 @@ export default class Catelog extends Component {
         >
           <img
             src={this.props.favico}
-            alt={this.props.name}
+            alt="icon address"
             className="favicon"
           />
         </div>

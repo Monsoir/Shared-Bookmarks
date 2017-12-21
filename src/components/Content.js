@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import './content.css';
 
 import Catelog from './Catelog';
+import { getFavicon, getHostName } from '../utils/utils';
 
 class Content extends Component {
   renderHeader = () => {
@@ -22,11 +23,13 @@ class Content extends Component {
     const data = this.props.categories[this.props.categoryIndex].catelogs;
 
     const items = data.map((item, index) => {
+      const favico = item.favicon || getFavicon(item.address);
+      const name = item.name || getHostName(item.address);
       return (
         <li key={`${item.name}-${index + 1}`} className="contentListItem">
           <Catelog
-            favico={item.favicon}
-            name={item.name}
+            favico={favico}
+            name={name}
             remark={item.remark}
             address={item.address}
           />
