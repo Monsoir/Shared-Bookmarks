@@ -17,11 +17,18 @@
 
 .item {
   font-size: 20px;
-  color: #EE712B;
   font-family: "Arial-BoldMT";
   padding: 0;
   padding: 20px;
   cursor: pointer;
+}
+
+.normalItem {
+  color: #EE712B;
+}
+
+.selectedItem {
+  color: #3DC7BE;
 }
 
 .itemButton {

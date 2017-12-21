@@ -12,9 +12,10 @@ class Sidebar extends Component {
 
   renderItems = () => {
     const items = this.props.categories.map((item, index) => {
+      const style = this.props.selectedCategoryIndex === index ? 'item selectedItem' : 'item normalItem';
       return (
         <li
-          className="item"
+          className={style}
           key={`${item.name}-${index + 1}`}
         >
           <div
@@ -46,6 +47,7 @@ class Sidebar extends Component {
 const mapStateToProps = (state) => {
   return {
     categories: state.Categories,
+    selectedCategoryIndex: state.CategoryNavigation.categoryIndex,
   };
 };
 
