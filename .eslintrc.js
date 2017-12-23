@@ -8,6 +8,7 @@ module.exports = {
         "react/prefer-stateless-function": "off",
         "max-len": "off",
         "react/prop-types": "off",
+        "jsx-a11y/anchor-is-valid": "off",
     },
     "globals": { // 忽略全局对象
         "window": true,

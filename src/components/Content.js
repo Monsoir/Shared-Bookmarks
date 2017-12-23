@@ -5,10 +5,22 @@ import './content.css';
 
 import Catelog from './Catelog';
 import { getFavicon, getHostName } from '../utils/utils';
+import { updateCategoryNode } from '../redux/catelog-navigate.redux';
 
 class Content extends Component {
+  handleCatelogClick = (index) => {
+    if (!this.props.categoryNode) return;
+
+    if (this.props.categoryNode.catelogs) {
+      window.location = this.props.categoryNode.catelogs[index].address;
+    }
+  };
+
   renderHeader = () => {
-    const categoryName = this.props.categories[this.props.categoryIndex].name;
+    let categoryName = '';
+    if (this.props.categoryNode) {
+      categoryName = this.props.categoryNode.title;
+    }
 
     return (
       <div className="header">
@@ -20,8 +32,11 @@ class Content extends Component {
   };
 
   renderBody = () => {
-    const data = this.props.categories[this.props.categoryIndex].catelogs;
+    // const data = this.props.categories[this.props.categoryIndex].catelogs;
 
+    if (!this.props.categoryNode) return null;
+
+    const data = this.props.categoryNode.catelogs;
     const items = data.map((item, index) => {
       const favico = item.favicon || getFavicon(item.address);
       const name = item.name || getHostName(item.address);
@@ -32,6 +47,7 @@ class Content extends Component {
             name={name}
             remark={item.remark}
             address={item.address}
+            clickHandler={() => { this.handleCatelogClick(index); }}
           />
         </li>
       );
@@ -58,7 +74,7 @@ class Content extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    categoryIndex: state.CategoryNavigation.categoryIndex,
+    categoryNode: state.CategoryNavigation.categoryNode,
     categories: state.Categories,
   };
 };
