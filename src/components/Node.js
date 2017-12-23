@@ -43,7 +43,7 @@ class Node extends Component {
   render() {
     let nodes;
 
-    if (this.props.node.categories) {
+    if (this.props.node && this.props.node.categories) {
       nodes = this.props.node.categories.map((node, index) => {
         return (
           <li key={`${node.title}-${index + 1}`}>
@@ -61,10 +61,11 @@ class Node extends Component {
       };
     }
 
+    const title = this.props.node ? this.props.node.title || '' : '';
     return (
       <div>
         <div role="button" tabIndex={0} onMouseDown={() => this.toggle()} style={styles.node}>
-          {this.props.node.title || ''}
+          {title}
         </div>
         <ul style={hiddenStyle}>
           {nodes}

@@ -1,52 +1,90 @@
-import { TreeData } from './testData';
+import { Source } from '../config/config';
 
-const FETCH = 'fetch';
+const START_FETCHING = 'start_fetching';
+const FETCH_SUCCESS = 'fetch_success';
+const FETCH_FAILURE = 'fetch_failure';
 const UPDATE_BOOKMARKS = 'update_bookmarks';
-const UPDATE_CATEGORIES = 'update_categories';
 
-const initialState2 = TreeData;
+export const FetchStatus = {
+  suspend: -1,
+  fetching: 0,
+  success: 1,
+  failure: 2,
+};
 
 const initialState = {
-  title: '等待中...',
-  catelogs: [],
-  categories: [],
+  // title: '等待中...',
+  // catelogs: [],
+  // categories: [],
+  data: null,
+  fetchResult: FetchStatus.suspend,
 };
 
 /** Action Creators */
-export function updateCategories(categories) {
+
+export function startFetchingBookmarks() {
   return {
-    type: UPDATE_CATEGORIES,
-    categories,
+    type: START_FETCHING,
+    fetchResult: FetchStatus.fetching,
   };
 }
 
 export function updateBookmarks(bookmarks) {
   return {
-    type: UPDATE_BOOKMARKS,
+    type: FETCH_SUCCESS,
+    fetchResult: FetchStatus.success,
     bookmarks,
   };
 }
 
-export function asycUpdateCategories() {
+export function failFetchingBookmarks() {
+  return {
+    type: FETCH_FAILURE,
+    fetchResult: FetchStatus.failure,
+  };
+}
+
+export function fetchCategories() {
   return ((dispatch) => {
-    setTimeout(() => {
-      dispatch(updateBookmarks(initialState2));
-    }, 2000);
+    /* eslint-disable */
+    dispatch(startFetchingBookmarks());
+    fetch(Source)
+      .then((response) => {
+        return response.json();
+      })
+      .then((json) => {
+        dispatch(updateBookmarks(json));
+      })
+      .catch(() => {
+        dispatch();
+      });
   });
+  /* eslint-enable */
 }
 
 /** Reducer */
 export function Categories(state = initialState, action) {
   switch (action.type) {
-    case FETCH:
+    case START_FETCHING:
       return {
         ...state,
-        categories: action.categories,
+        ...initialState,
+        data: null,
+        fetchResult: action.fetchResult,
       };
-    case UPDATE_BOOKMARKS:
+    case FETCH_SUCCESS:
       return {
         ...state,
         ...action.bookmarks,
+        data: action.bookmarks,
+        fetchResult: action.fetchResult,
+      };
+    case FETCH_FAILURE:
+      return {
+        ...state,
+        ...initialState,
+        data: null,
+        fetchResult: action.fetchResult,
       };
     default:
       return state;
