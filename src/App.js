@@ -5,9 +5,15 @@ import { connect } from 'react-redux';
 import Content from './components/Content';
 import TreeNode from './components/Node';
 
+import { asycUpdateCategories } from './redux/category.redux';
+
 import './app.css';
 
 class App extends Component {
+  componentDidMount() {
+    this.props.asycUpdateCategories();
+  }
+
   render() {
     return (
       <div className="app">
@@ -29,4 +35,8 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps)(App);
+const mapDispatchToProps = {
+  asycUpdateCategories,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

@@ -7,6 +7,7 @@ import {
   compose,
 } from 'redux';
 import { Provider } from 'react-redux';
+import thunk from 'redux-thunk'; // Note: 直接引入，不用 { thunk }, 否则报错，找不到
 
 // import { BrowserRouter } from 'react-router-dom';
 
@@ -18,7 +19,7 @@ import reducer from './redux/redux';
 
 // Chrome 调试工具
 const reduxDevTools = window.devToolsExtension ? window.devToolsExtension() : (() => {});
-const composer = compose(reduxDevTools || null);
+const composer = compose(applyMiddleware(thunk), reduxDevTools || null);
 // const composer =
 
 const store = createStore(
