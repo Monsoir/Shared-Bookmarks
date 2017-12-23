@@ -8,7 +8,7 @@ import {
 } from 'redux';
 import { Provider } from 'react-redux';
 
-import { BrowserRouter } from 'react-router-dom';
+// import { BrowserRouter } from 'react-router-dom';
 
 import './index.css';
 import App from './App';
@@ -26,19 +26,19 @@ const store = createStore(
   composer,
 );
 
-const ProviderApp = (
-  <Provider store={store}>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </Provider>
-);
-
 // const ProviderApp = (
 //   <Provider store={store}>
-//     <App />
+//     <BrowserRouter>
+//       <App />
+//     </BrowserRouter>
 //   </Provider>
 // );
+
+const ProviderApp = (
+  <Provider store={store}>
+    <App />
+  </Provider>
+);
 
 ReactDOM.render(ProviderApp, document.getElementById('root'));
 registerServiceWorker();

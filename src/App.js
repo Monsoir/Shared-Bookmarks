@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 // import Sidebar from './components/Sidebar';
 import Content from './components/Content';
 import TreeNode from './components/Node';
-import { TreeData } from './redux/testData';
 
 import './app.css';
 
@@ -13,7 +13,7 @@ class App extends Component {
       <div className="app">
         <div className="sidebar">
           {/* <Sidebar /> */}
-          <TreeNode node={TreeData} />
+          <TreeNode node={this.props.categories} />
         </div>
         <div className="content">
           <Content />
@@ -23,4 +23,10 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    categories: state.Categories,
+  };
+};
+
+export default connect(mapStateToProps)(App);

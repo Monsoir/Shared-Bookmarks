@@ -1,9 +1,9 @@
-import { TestData } from './testData';
+import { TreeData } from './testData';
 
 const FETCH = 'fetch';
 const UPDATE_CATEGORIES = 'update_categories';
 
-const initialState = TestData.categories;
+const initialState = TreeData;
 
 /** Action Creators */
 export function updateCategories(categories) {

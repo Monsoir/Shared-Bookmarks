@@ -43,7 +43,7 @@ class Content extends Component {
       return (
         <li key={`${item.name}-${index + 1}`} className="contentListItem">
           <Catelog
-            favico={favico}
+            favicon={favico}
             name={name}
             remark={item.remark}
             address={item.address}
@@ -75,7 +75,6 @@ class Content extends Component {
 const mapStateToProps = (state) => {
   return {
     categoryNode: state.CategoryNavigation.categoryNode,
-    categories: state.Categories,
   };
 };
 
