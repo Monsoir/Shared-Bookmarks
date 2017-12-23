@@ -13,6 +13,7 @@ module.exports = {
     "globals": { // 忽略全局对象
         "window": true,
         "document": true,
+        "fetch": true,
     },
     "parser": "babel-eslint", // 转换箭头函数
     "parserOptions": {

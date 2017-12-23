@@ -46,7 +46,6 @@ export function failFetchingBookmarks() {
 
 export function fetchCategories() {
   return ((dispatch) => {
-    /* eslint-disable */
     dispatch(startFetchingBookmarks());
     fetch(Source)
       .then((response) => {
@@ -59,7 +58,6 @@ export function fetchCategories() {
         dispatch();
       });
   });
-  /* eslint-enable */
 }
 
 /** Reducer */
