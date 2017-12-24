@@ -1,6 +1,6 @@
 # 共享书签 Shared Bookmarks
 
-![](./docs/screenshots.png)
+![](./docs/screenshot.png)
 
 ## 简介
 
