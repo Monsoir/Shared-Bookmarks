@@ -44,7 +44,7 @@ class App extends Component {
         prompt = '抓取成功';
         break;
       case FetchStatus.failure:
-        prompt = '数据失败或数据格式有误';
+        prompt = '数据获取失败或数据格式有误';
         break;
       default:
         break;
