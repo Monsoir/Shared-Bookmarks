@@ -1,4 +1,4 @@
-import { Catelog } from '../../model/Catelog';
+const Catelog = require('../../model/Catelog');
 
 const iOS3rdParty = {
   title: '3rd Party',
@@ -19,4 +19,4 @@ const iOS3rdParty = {
   categories: [],
 };
 
-export default iOS3rdParty;
+module.exports = iOS3rdParty;

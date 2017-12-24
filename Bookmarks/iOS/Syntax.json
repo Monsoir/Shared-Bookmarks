@@ -1,0 +1,48 @@
+{
+  "title": "语法",
+  "catelogs": [
+    {
+      "address": "http://fuckingblocksyntax.com/",
+      "name": "How Do I Declare A Block in Objective-C?",
+      "favicon": "",
+      "remark": ""
+    },
+    {
+      "address": "http://swift.flakor.com/guide/zh-tw/chapter2/03_Strings_and_Characters.html",
+      "name": "字符串和字符 | The Swift Programming Language 中文版",
+      "favicon": "",
+      "remark": ""
+    },
+    {
+      "address": "http://fuckingclosuresyntax.com/",
+      "name": "How Do I Declare a Closure in Swift?",
+      "favicon": "",
+      "remark": ""
+    },
+    {
+      "address": "http://mp.weixin.qq.com/s?__biz=MjM5OTM0MzIwMQ==&mid=2652545501&idx=3&sn=66500deb8fb73a2cba47c0cbf8aaf4c9&scene=0#wechat_redirect",
+      "name": "Clang Attributes 黑魔法小记",
+      "favicon": "",
+      "remark": ""
+    },
+    {
+      "address": "http://mp.weixin.qq.com/s?__biz=MjM5OTM0MzIwMQ==&mid=2652545480&idx=6&sn=4b392cd029b42f5d265d002ff84da4a1&scene=0#wechat_redirect",
+      "name": "深入解析 Objective-C 中方法的结构",
+      "favicon": "",
+      "remark": ""
+    },
+    {
+      "address": "http://www.cocoachina.com/ios/20160527/16478.html",
+      "name": "iOS：你真的理解你在用的自定义NSLog吗？ - CocoaChina_让移动开发更简单",
+      "favicon": "",
+      "remark": ""
+    },
+    {
+      "address": "http://fuckingclangwarnings.com/",
+      "name": "Which Clang Warning Is Generating This Message?",
+      "favicon": "",
+      "remark": ""
+    }
+  ],
+  "categories": []
+}

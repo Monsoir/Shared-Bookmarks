@@ -1,0 +1,18 @@
+{
+  "title": "Utils Usage",
+  "catelogs": [
+    {
+      "address": "http://www.cocoachina.com/ios/20160527/16479.html",
+      "name": "[译] NSScanner：一个陌生的条件判断利器！ - CocoaChina_让移动开发更简单",
+      "favicon": "",
+      "remark": ""
+    },
+    {
+      "address": "http://mp.weixin.qq.com/s?__biz=MjM5OTM0MzIwMQ==&mid=2652545519&idx=3&sn=8bd8033859ae7bca66d7b071eb49a50a&scene=0#wechat_redirect",
+      "name": "远程通知推送教程",
+      "favicon": "",
+      "remark": ""
+    }
+  ],
+  "categories": []
+}

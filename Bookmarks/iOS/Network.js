@@ -1,4 +1,4 @@
-import { Catelog } from '../../model/Catelog';
+const Catelog = require('../../model/Catelog');
 
 const Network = {
   title: 'Network',
@@ -11,4 +11,4 @@ const Network = {
   categories: [],
 };
 
-export default Network;
+module.exports = Network;

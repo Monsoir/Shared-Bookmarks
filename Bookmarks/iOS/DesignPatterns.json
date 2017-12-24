@@ -1,0 +1,24 @@
+{
+  "title": "设计模式与架构",
+  "catelogs": [
+    {
+      "address": "http://objccn.io/issue-13-1/",
+      "name": "MVVM 介绍",
+      "favicon": "",
+      "remark": ""
+    },
+    {
+      "address": "http://zipperary.com/2014/09/07/mvc-of-ios/",
+      "name": "理解 iOS 的 MVC 架构 | Zippera's blog",
+      "favicon": "",
+      "remark": ""
+    },
+    {
+      "address": "http://www.cocoachina.com/ios/20160525/16434.html",
+      "name": "iOS应用层架构之CDD - CocoaChina_让移动开发更简单",
+      "favicon": "",
+      "remark": ""
+    }
+  ],
+  "categories": []
+}

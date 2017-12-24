@@ -1,0 +1,24 @@
+{
+  "title": "教程",
+  "catelogs": [
+    {
+      "address": "http://www.raywenderlich.com/",
+      "name": "Ray Wenderlich | Tutorials for iPhone / iOS Developers and Gamers",
+      "favicon": "",
+      "remark": ""
+    },
+    {
+      "address": "http://course.tianmaying.com/iOS-Course",
+      "name": "iOS应用开发 | 天码营 - 新一代技术学习服务平台",
+      "favicon": "",
+      "remark": ""
+    },
+    {
+      "address": "http://c0ming.me/qr-code-scan/",
+      "name": "iOS 原生扫 QR 码的那些事",
+      "favicon": "",
+      "remark": ""
+    }
+  ],
+  "categories": []
+}

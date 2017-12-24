@@ -1,6 +1,6 @@
-import { Catelog } from '../../model/Catelog';
+const Catelog = require('../../model/Catelog');
 
-export const Runloop = {
+const Runloop = {
   title: 'RunLoop',
   catelogs: [
     new Catelog(
@@ -14,3 +14,5 @@ export const Runloop = {
   ],
   categories: [],
 };
+
+module.exports = Runloop;
