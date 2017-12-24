@@ -6,6 +6,10 @@
 
 使用 React + React-Redux 进行构建的单页面应用
 
+### Demo
+
+[我的书签](https://monsoir.github.io/Shared-Bookmarks/)(只含部分数据)
+
 ### 本地安装
 
 ```sh
@@ -16,6 +20,8 @@ npm install
 npm start
 ```
 ## 书签数据 JSON 格式
+
+从最顶上的 URL 中返回的数据需要满足一下格式
 
 ```json
 {
@@ -44,4 +50,8 @@ npm start
     ]
 }
 ```
+
+## Todo
+
+编写脚本，自动将 Safari 中的书签信息整理成上面的 JSON 格式
 
