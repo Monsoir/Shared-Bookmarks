@@ -1,16 +1,3 @@
-// {
-//   title: '',
-//   catelogs: [],
-//   categories: [],
-// };
-
-// {
-//   favicon: '',
-//   address: '',
-//   name: '',
-//   remark: '',
-// };
-
 import iOS from '../Bookmarks/iOS/iOSBookmark';
 
 export const TreeData = {

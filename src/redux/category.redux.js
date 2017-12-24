@@ -1,9 +1,11 @@
 import { Source } from '../config/config';
+import { addProtocolIfNeeded } from '../utils/utils';
 
 const START_FETCHING = 'start_fetching';
 const FETCH_SUCCESS = 'fetch_success';
 const FETCH_FAILURE = 'fetch_failure';
 const UPDATE_BOOKMARKS = 'update_bookmarks';
+const UPDATING_BOOKMARKS_ADDRESS = 'updating_bookmarks_address';
 
 export const FetchStatus = {
   suspend: -1,
@@ -13,9 +15,7 @@ export const FetchStatus = {
 };
 
 const initialState = {
-  // title: '等待中...',
-  // catelogs: [],
-  // categories: [],
+  bookmarksAddress: '',
   data: null,
   fetchResult: FetchStatus.suspend,
 };
@@ -44,20 +44,27 @@ export function failFetchingBookmarks() {
   };
 }
 
-export function fetchCategories() {
+export function fetchCategories(address) {
   return ((dispatch) => {
     dispatch(startFetchingBookmarks());
-    fetch(Source)
+    fetch(addProtocolIfNeeded(address))
       .then((response) => {
         return response.json();
       })
       .then((json) => {
         dispatch(updateBookmarks(json));
       })
-      .catch(() => {
-        dispatch();
+      .catch((e) => {
+        dispatch(failFetchingBookmarks());
       });
   });
+}
+
+export function updatingBookmarksAddress(address) {
+  return {
+    type: UPDATING_BOOKMARKS_ADDRESS,
+    bookmarksAddress: address,
+  };
 }
 
 /** Reducer */
@@ -66,23 +73,27 @@ export function Categories(state = initialState, action) {
     case START_FETCHING:
       return {
         ...state,
-        ...initialState,
         data: null,
         fetchResult: action.fetchResult,
       };
     case FETCH_SUCCESS:
       return {
         ...state,
-        ...action.bookmarks,
+        ...action,
         data: action.bookmarks,
         fetchResult: action.fetchResult,
       };
     case FETCH_FAILURE:
       return {
         ...state,
-        ...initialState,
         data: null,
         fetchResult: action.fetchResult,
+      };
+    case UPDATING_BOOKMARKS_ADDRESS:
+      return {
+        ...state,
+        ...action,
+        bookmarksAddress: action.bookmarksAddress,
       };
     default:
       return state;

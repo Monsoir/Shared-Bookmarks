@@ -1,9 +1,55 @@
 .app {
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100vh;
+  width: 100%;
+}
+
+.subContainer {
+  display: flex;
   flex-direction: row;
   justify-content: flex-start;
   height: 100vh;
   width: 100%;
+}
+
+.addressBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+}
+
+.addressInput {
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 70%;
+  width: 100%;
+  font-size: xx-large;
+  outline: none;
+  border-width: 0;
+  opacity: 0.2;
+}
+
+.addressInput:focus {
+  opacity: 1;
+}
+
+.addressConfirm {
+  height: 70%;
+  width: 10%;
+  font-size: xx-large;
+  outline: none;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-width: 0;
+}
+
+.addressConfirm:active {
+  opacity: 0.2;
 }
 
 .sidebar {

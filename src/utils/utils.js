@@ -30,3 +30,17 @@ export function getFavicon(aURL) {
 
   return '';
 }
+
+/**
+ * 判断字符串是否以 http 或 https 开头
+ * 不负责检查是不是合法的 URL
+ * @param {*一个可能是 URL 的字符串} aURL
+ */
+export function addProtocolIfNeeded(aURL) {
+  const regex = /^(https?):\/\/./;
+  if (!regex.test(aURL)) {
+    return `http://${aURL}`;
+  }
+
+  return aURL;
+}
