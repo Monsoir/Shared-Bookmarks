@@ -18,9 +18,10 @@ import registerServiceWorker from './registerServiceWorker';
 import reducer from './redux/redux';
 
 // Chrome 调试工具
-const reduxDevTools = window.devToolsExtension ? window.devToolsExtension() : (() => {});
-const composer = compose(applyMiddleware(thunk), reduxDevTools || null);
-// const composer =
+// const reduxDevTools = window.devToolsExtension ? window.devToolsExtension() : (() => {});
+// const composer = compose(applyMiddleware(thunk), reduxDevTools);
+
+const composer = compose(applyMiddleware(thunk));
 
 const store = createStore(
   reducer,
