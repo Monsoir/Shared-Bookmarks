@@ -10,6 +10,10 @@
 
 [我的书签](https://monsoir.github.io/Shared-Bookmarks/)(只含部分数据)
 
+书签数据示例 URL
+
+- [https://raw.githubusercontent.com/Monsoir/Shared-Bookmarks/master/Bookmarks/bookmarks.json](https://raw.githubusercontent.com/Monsoir/Shared-Bookmarks/master/Bookmarks/bookmarks.json)
+
 ### 本地安装
 
 ```sh
