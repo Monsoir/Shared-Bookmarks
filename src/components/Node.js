@@ -5,25 +5,25 @@ import { updateCategoryNode } from '../redux/catelog-navigate.redux';
 
 import './node.css';
 
-const styles = {
-  node: {
-    fontSize: 20,
-    fontFamily: 'Arial-BoldMT',
-    cursor: 'pointer',
-    outline: 'none',
-    wordWrap: 'break-word',
-    marginLeft: 10,
-    marginRight: 10,
-    marginTop: 10,
-    marginBottom: 10,
-  },
-  hiddenNode: {
-    display: 'none',
-  },
-  list: {
-    listStyleType: 'none',
-  },
-};
+// const styles = {
+//   node: {
+//     fontSize: '100px',
+//     fontFamily: 'Arial-BoldMT',
+//     cursor: 'pointer',
+//     outline: 'none',
+//     wordWrap: 'break-word',
+//     marginLeft: '10px',
+//     marginRight: '10px',
+//     marginTop: '10px',
+//     marginBottom: '10px',
+//   },
+//   hiddenNode: {
+//     display: 'none',
+//   },
+//   list: {
+//     listStyleType: 'none',
+//   },
+// };
 
 class Node extends Component {
   constructor(props) {
@@ -53,21 +53,26 @@ class Node extends Component {
       });
     }
 
-    let hiddenStyle = styles.list;
+    // let hiddenStyle = styles.list;
+    // if (!this.state.visible) {
+    //   hiddenStyle = {
+    //     ...hiddenStyle,
+    //     display: 'none',
+    //   };
+    // }
+
+    let hiddenClasses = 'list';
     if (!this.state.visible) {
-      hiddenStyle = {
-        ...hiddenStyle,
-        display: 'none',
-      };
+      hiddenClasses = `${hiddenClasses} hiddenNode`;
     }
 
     const title = this.props.node ? this.props.node.title || '' : '';
     return (
       <div>
-        <div role="button" tabIndex={0} onMouseDown={() => this.toggle()} style={styles.node}>
+        <div className="node" role="button" tabIndex={0} onMouseDown={() => this.toggle()}>
           {title}
         </div>
-        <ul style={hiddenStyle}>
+        <ul className={hiddenClasses}>
           {nodes}
         </ul>
       </div>

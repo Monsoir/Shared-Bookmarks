@@ -6,20 +6,20 @@
   width: 100%;
 }
 
-.subContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  height: 100vh;
-  width: 100%;
-}
-
 .addressBar {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   height: 100px;
+  width: 100vw;
+}
+
+.subContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  height: 100%;
   width: 100%;
 }
 
@@ -28,7 +28,7 @@
   margin-right: 10px;
   height: 70%;
   width: 100%;
-  font-size: xx-large;
+  font-size: 30px;
   outline: none;
   border-width: 0;
   opacity: 0.2;
@@ -41,7 +41,7 @@
 .addressConfirm {
   height: 70%;
   width: 10%;
-  font-size: xx-large;
+  font-size: 30px;
   outline: none;
   margin-left: 10px;
   margin-right: 10px;
@@ -53,13 +53,20 @@
 }
 
 .sidebar {
+  min-width: 200px;
+  width: 25%;
+  height: 100%;
   flex: 0.25;
+  overflow: scroll;
 }
 
 .content {
+  width: 100%;
+  height: 100%;
   flex: 1;
 }
 
 .prompt {
+  font-size: 15px;
   margin: 10px;
 }
