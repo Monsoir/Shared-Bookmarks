@@ -48,32 +48,8 @@
                     "remark": ""
                 },
                 {
-                    "name": "精品MAC应用分享",
-                    "address": "http://xclient.info/",
-                    "favicon": "",
-                    "remark": ""
-                },
-                {
                     "name": "My Day - To-Do",
                     "address": "https://todo.microsoft.com/",
-                    "favicon": "",
-                    "remark": ""
-                },
-                {
-                    "name": "人人影视字幕组,美剧下载,日剧下载,电影下载|为您翻译最新最快的海外影视剧,ZiMuZu.tv",
-                    "address": "http://www.zimuzu.tv/",
-                    "favicon": "",
-                    "remark": ""
-                },
-                {
-                    "name": "冰冰字幕组 ice字幕组 最新英剧下载 英剧字幕 英剧在线观看",
-                    "address": "https://www.icezmz.com/",
-                    "favicon": "",
-                    "remark": ""
-                },
-                {
-                    "name": "磁力下载站,cili001.com,最新美剧下载,日剧下载,电影下载,韩剧下载",
-                    "address": "http://cili001.com/",
                     "favicon": "",
                     "remark": ""
                 },
@@ -671,7 +647,7 @@
                     "address": "http://www.it-ebooks.info/",
                     "favicon": "",
                     "remark": ""
-                },
+                }
             ],
             "categories": []
         },
