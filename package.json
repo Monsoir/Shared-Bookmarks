@@ -1,6 +1,6 @@
 {
   "name": "shared-bookmarks",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": true,
   "homepage": "https://monsoir.github.io/Shared-Bookmarks/",
   "dependencies": {
