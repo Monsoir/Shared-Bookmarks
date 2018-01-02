@@ -11,7 +11,7 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  height: 100px;
+  height: 80px;
   width: 100vw;
 }
 
@@ -46,6 +46,7 @@
   margin-left: 10px;
   margin-right: 10px;
   border-width: 0;
+  background-color: white;
 }
 
 .addressConfirm:active {

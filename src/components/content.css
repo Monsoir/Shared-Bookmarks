@@ -1,17 +1,15 @@
 .content {
   height: 100%;
   width: 100%;
-  background-color: #FBF7F7;
   display: flex;
   flex-direction: column;
-  /* border-left: 1px solid black; */
+  border-left: 1px solid #ededed;
 }
 
 .header {
-  flex: 0.2;
+  flex: 0.1;
   height: 100%;
   width: 100%;
-  /* background-color: red; */
 
   display: flex;
   justify-content: center;
@@ -23,7 +21,7 @@
   font-size: 35px;
   margin-left: 20px;
   margin-right: 20px;
-  color: #DC4712;
+  color: #34373d;
   font-family: "Avenir-Light";
 }
 
@@ -33,7 +31,7 @@
   width: 100%;
   /* background-color: yellow; */
   overflow: scroll;
-  margin-top: 10px;
+  /* margin-top: 10px; */
 }
 
 .contentList {

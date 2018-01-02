@@ -8,11 +8,24 @@ li {
 
 .node {
   font-size: 20px;
-  font-family: 'Arial-BoldMT', Helvetica, sans-serif;
+  font-family: Segoe, Segoe UI, Arial, "sans-serif";
   cursor: pointer;
   outline: none;
   word-wrap: break-word;
-  margin: 10px;
+  /* margin: 30px; */
+  padding: 20px;
+}
+
+.node:active {
+  background-color: #ededed !important;
+}
+
+.node:hover {
+  background-color: #f5f5f5;
+}
+
+.node:focus {
+  background-color: #ededed;
 }
 
 .hiddenNode {
