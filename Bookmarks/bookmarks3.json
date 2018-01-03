@@ -761,6 +761,12 @@
                     "address": "http://unicode.org/emoji/charts/full-emoji-list.html",
                     "favicon": "",
                     "remark": ""
+                },
+                {
+                    "name": "loading.io - Your SVG + GIF Ajax Loading Icons",
+                    "address": "https://loading.io/",
+                    "favicon": "",
+                    "remark": "各种 Loading 动画"
                 }
             ],
             "categories": [
