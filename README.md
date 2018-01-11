@@ -8,15 +8,11 @@
 
 ### Demo
 
-[我的书签](https://monsoir.github.io/Shared-Bookmarks/)(只含部分数据)
-
-书签数据示例 URL
-
-- [https://raw.githubusercontent.com/Monsoir/Shared-Bookmarks/master/Bookmarks/bookmarks.json](https://raw.githubusercontent.com/Monsoir/Shared-Bookmarks/master/Bookmarks/bookmarks.json)
+[👉 Demo](https://monsoir.github.io/Shared-Bookmarks/)
 
 我的书签数据 URL
 
-- [https://raw.githubusercontent.com/Monsoir/Shared-Bookmarks/master/Bookmarks/bookmarks2.json](https://raw.githubusercontent.com/Monsoir/Shared-Bookmarks/master/Bookmarks/bookmarks2.json)
+- [https://raw.githubusercontent.com/Monsoir/Shared-Bookmarks/master/Bookmarks/bookmarks3.json](https://raw.githubusercontent.com/Monsoir/Shared-Bookmarks/master/Bookmarks/bookmarks3.json)
 
 ### 本地安装
 
