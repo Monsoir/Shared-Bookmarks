@@ -1453,6 +1453,12 @@
                     "address": "https://wohugb.gitbooks.io/ecmascript-6/content/",
                     "favicon": "",
                     "remark": ""
+                },
+                {
+                    "name": "区块链技术指南",
+                    "address": "https://gitlore.com/subject/59/README.md",
+                    "favicon": "",
+                    "remark": ""
                 }
             ],
             "categories": []
