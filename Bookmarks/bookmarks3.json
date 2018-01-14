@@ -1552,6 +1552,19 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "数学",
+            "catelogs": [
+                {
+                    "name": "《图解普林斯顿微积分读本》系列合集",
+                    "address": "https://mp.weixin.qq.com/s?__biz=MzAxNzg3MTE3Ng==&mid=2247488709&idx=1&sn=5b576ea44103c3c932df005a8c6e6c81&chksm=9bdface2aca825f4b5f509990162cbcfcc4a277ffb74cbe6205d47b33a03b22e06fbc69eddc9&scene=21#wechat_redirect",
+                    "favicon": "",
+                    "remark": ""
+                }
+            ],
+            "categories": [
+            ]
         }
     ]
 }
